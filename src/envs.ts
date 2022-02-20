@@ -17,4 +17,5 @@ export const envs = {
     },
     url: getEnv('URL_BASE'),
     categories: getEnv('CATEGORIES').split(';'),
+    retryCount: parseInt(getEnv('RETRY_COUNT')),
 };

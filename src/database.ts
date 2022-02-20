@@ -2,7 +2,7 @@ import mariadb from 'mariadb';
 import { ProductResponse } from './fetch/product';
 import { envs } from './envs';
 
-const pool = mariadb.createPool({
+export const pool = mariadb.createPool({
     connectionLimit: 10,
     host: envs.db.host,
     port: envs.db.port,
