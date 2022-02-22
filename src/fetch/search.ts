@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import { envs } from '../envs';
 
-const createUrl = (page: number, size: number) => `${envs.url}/searchItemsCommon?page=${page}&size=${size}&sort=`;
+const createUrl = (page: number, size: number) => `${envs.url}/searchItemsCommon?page=${page}&size=${size}&sort=startingTime:DESC&finished=true`;
 
 const createBody = (category: string) =>
     JSON.stringify({
