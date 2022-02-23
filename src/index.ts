@@ -11,6 +11,7 @@ const main = async () => {
         await fetchSearch(category, false, async (items) => {
             for await (const item of items) {
                 if (envs.retryCount !== 0 && currentRetryCount >= envs.retryCount) {
+                    console.debug(`Number of errors is higher than ${envs.retryCount}, terminating.`);
                     break;
                 }
                 try {
